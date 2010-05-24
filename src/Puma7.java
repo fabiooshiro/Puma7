@@ -1,7 +1,7 @@
 public class Puma7 {
 	public static void main(String[] args) {
 		byte p[]=new byte[7];
-		p[0]=(byte)0x80;
+		p[0]=(byte)0x80;//espaco em branco
 		p[1]=1;
 		p[2]=2;
 		p[3]=4;
@@ -15,7 +15,7 @@ public class Puma7 {
 		
 		c = (byte)(p[1]|p[3]|p[6]);//u
 		System.out.write(new byte[]{c},0,1);		
-		
+
 		c = (byte)(p[1]|p[3]|p[4]);//m
 		System.out.write(new byte[]{c},0,1);
 		
