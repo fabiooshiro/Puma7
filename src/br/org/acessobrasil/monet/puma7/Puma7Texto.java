@@ -22,7 +22,7 @@ public class Puma7Texto {
 			for(int i=0;i<arq.length();i++){
 				char c = arq.charAt(i);
 				if(c=='\r') continue;//nao existe \r
-				byte b = tabelaConversao.converter(c);
+				byte b = tabelaConversao.converter(Character.toLowerCase(c));
 				fw.write(new byte[]{b}, 0, 1);
 			}
 		}finally{

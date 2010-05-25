@@ -90,6 +90,8 @@ public class TabelaConversaoTexto {
 		case '_': return (byte) (p[4] | p[5] | p[6]);
 		case '\n': return (byte) 0x81;
 		case 0x0C: return (byte) 0x83;//Form Feed ou \f
+		case 0x7F: return (byte) 0x7F;//Del, segundo a tabela ascii
+		case 123: return (byte) 123;// { segundo a tabela ascii
 		//case '~': return (byte) 0x81;//??
 		
 		default:

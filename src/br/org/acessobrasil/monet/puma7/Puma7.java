@@ -21,10 +21,11 @@ public class Puma7 {
 	 * Converte um arquivo do braille facil impresso no HD para o bin&aacute;rio da puma 7
 	 * @param origem arquivo do braille facil impresso no HD
 	 * @param destino arquivo binario de destino, n&atilde;o pergunta se deseja sobreescrever
-	 * @throws IOException caso ocorra algum erro, file not found, etc
+	 * @throws Exception caso ocorra algum erro, file not found, etc
 	 */
-	public static void converterTxtImpresso(File origem, File destino) throws IOException{
-		
+	public static void converterTxtImpresso(File origem, File destino) throws Exception{
+		Puma7Texto puma7Texto = new Puma7Texto();
+		puma7Texto.converter(origem, destino);
 	}
 	
 	/**
