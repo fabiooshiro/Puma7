@@ -17,6 +17,22 @@ public class Puma7 {
 	private static int fy = 25; //milimetros/10 ou seja 2,5
 	static FileOutputStream fw;
 	
+	public static int getFx() {
+		return fx;
+	}
+	
+	public static void setFx(int fx) {
+		Puma7.fx = fx;
+	}
+	
+	public static int getFy() {
+		return fy;
+	}
+	
+	public static void setFy(int fy) {
+		Puma7.fy = fy;
+	}
+	
 	/**
 	 * Converte um arquivo do braille facil impresso no HD para o bin&aacute;rio da puma 7
 	 * @param origem arquivo do braille facil impresso no HD

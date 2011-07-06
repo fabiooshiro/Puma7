@@ -21,12 +21,23 @@ public class MainFrame extends JFrame{
 	
 	private JButton btnGrafico;
 	private JButton btnTexto;
+	private JButton btnConfig;
 	public MainFrame() {
 		this.setTitle("Conversor de Arquivo para Puma VII");
-		this.setLayout(new GridLayout(1, 2));
+		this.setLayout(new GridLayout(2, 2));
 		
 		btnGrafico = new JButton("Grafico *.grb");
 		btnTexto = new JButton("Impresso do Braille Facil *.txt");
+		btnConfig = new JButton("Configurar");
+		
+		btnConfig.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent arg0) {
+				String strX = JOptionPane.showInputDialog(rootPane, "Espacamento X", Puma7.getFx());
+				Puma7.setFx(Integer.parseInt(strX));
+				String strY = JOptionPane.showInputDialog(rootPane, "Espacamento Y", Puma7.getFy());
+				Puma7.setFy(Integer.parseInt(strY));
+			}
+		});
 		
 		btnGrafico.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -49,7 +60,7 @@ public class MainFrame extends JFrame{
 		
 		this.add(btnGrafico);
 		this.add(btnTexto);
-		
+		this.add(btnConfig);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		this.setSize(400,300);
